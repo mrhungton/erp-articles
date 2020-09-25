@@ -14,6 +14,7 @@ module Erp::Articles
     ALIAS_SERVICE = 'service'
     ALIAS_IDENTITY = 'identity'
     ALIAS_ABOUT_US = 'about_us'
+    ALIAS_PRODUCE = 'produce'
     ALIAS_CAREER = 'career'
     ALIAS_BLOG = 'blog'
     ALIAS_FAQ = 'faq'
