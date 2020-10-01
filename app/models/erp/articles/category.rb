@@ -15,6 +15,7 @@ module Erp::Articles
     ALIAS_IDENTITY = 'identity'
     ALIAS_ABOUT_US = 'about_us'
     ALIAS_PRODUCE = 'produce'
+    ALIAS_DISEASES = 'diseases'
     ALIAS_CAREER = 'career'
     ALIAS_BLOG = 'blog'
     ALIAS_FAQ = 'faq'
@@ -133,7 +134,7 @@ module Erp::Articles
         query = query.where('LOWER(name) LIKE ?', "%#{keyword}%")
       end
       
-      query = query.limit(20).map{|category| {value: category.id, text: category.name} }
+      query = query.limit(20).map{|category| {value: category.id, text: (category.parent_name.empty? ? '' : "#{category.parent_name} / ") + category.name} }
     end
     
     def archive
