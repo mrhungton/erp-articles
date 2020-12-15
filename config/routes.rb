@@ -4,7 +4,7 @@ Erp::Articles::Engine.routes.draw do
       resources :articles do
         collection do
           post 'list'
-          get 'dataselect'
+          post 'dataselect'
           delete 'delete_all'
           put 'archive_all'
           put 'unarchive_all'
@@ -17,7 +17,7 @@ Erp::Articles::Engine.routes.draw do
       resources :categories do
         collection do
           post 'list'
-          get 'dataselect'
+          post 'dataselect'
           delete 'delete_all'
           put 'archive_all'
           put 'unarchive_all'
