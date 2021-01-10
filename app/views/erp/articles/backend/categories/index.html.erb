@@ -19,8 +19,8 @@
         <div class="col-md-3">
             <%= erp_form_control('select', {
                 name: 'alias',
-                label: 'Alias chuyên mục',
-                placeholder: 'Chọn loại chuyên mục',
+                label: t('.alias'),
+                placeholder: t('.placeholder_alias'),
                 options: Erp::Articles::Category.get_alias_options,
                 multiple: true
             }) %>
