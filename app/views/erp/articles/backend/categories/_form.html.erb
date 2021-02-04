@@ -1,6 +1,14 @@
-<%= form_for([erp_articles, :backend, category]) do |f| %>
+<%= form_for([erp_articles, :backend, category], html: {multipart: true}) do |f| %>
     <div class="row">
-        <div class="col-md-12">
+       <div class="col-md-2">
+            <%= erp_form_control('image', {
+                img_src: category.image.system,
+                name: 'category[image]',
+                width: 150,
+                height: 150
+            }) %>
+        </div>
+        <div class="col-md-10">
             <div class="portlet light bordered">
                 <div class="portlet-body">
                     <div class="row">
