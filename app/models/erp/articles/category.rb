@@ -7,6 +7,7 @@ module Erp::Articles
     has_many :children, class_name: "Erp::Articles::Category", foreign_key: "parent_id"
     has_many :articles, class_name: "Erp::Articles::Article"
     validates :name, :presence => true
+    mount_uploader :image, Erp::Articles::CategoryUploader
     
     # class const
     ALIAS_COOPERATIVE_CUSTOMERS = 'cooperative_customers'
